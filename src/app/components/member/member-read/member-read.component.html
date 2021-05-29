@@ -1,0 +1,23 @@
+<div class="member-read">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nomes</th>
+                <th scope="col">WhatsApp</th>
+                <th scope="col">Enderaço</th>
+                <th scope="col">GC</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let members of member" >
+            <tr>
+                <th scope="row"> {{ members.id }} </th>
+                <td class="table-name"> {{ members.name }} </td>
+                <td class="table-whatsApp"> {{ members.whatsApp }} </td>
+                <td class="table-address"> {{ members.address }} </td>
+                <td class="table-gc"> {{ members.gc }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

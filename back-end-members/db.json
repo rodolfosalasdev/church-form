@@ -1,0 +1,20 @@
+{
+  "members": [
+    {
+      "name": "Rodolfo Salas de Lima",
+      "address": "Rua Serrolandia, 17",
+      "whatsApp": "11987070489",
+      "bday": "19111991",
+      "gc": "Huios",
+      "id": 1
+    },
+    {
+      "name": "Pedro W Magalhães",
+      "address": "rua escorpiao",
+      "whatsApp": "11987070489",
+      "bday": "19111991",
+      "gc": "Bethel",
+      "id": 2
+    }
+  ]
+}

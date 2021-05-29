@@ -1,0 +1,53 @@
+<div class="gc-creat">
+    <div class="title">
+        <h1>Cadastro Grupo de Conexão</h1>
+    </div>
+    <form class="row g-3" [formGroup]="gcForm">
+
+        <div class="form-group col-auto">
+            <label for="nameGc" class="visually-hidden">Nome GC</label>
+            <input type="text" formControlName="nameGc" 
+                id="nameGc" 
+                class="form-control" 
+                placeholder="Nome GC"
+                maxlength="20">
+        </div>
+        <div class="form-group col-auto">
+            <label for="address" class="visually-hidden">Endereço GC</label>
+            <input type="text" formControlName="address" 
+                id="address" 
+                class="form-control" 
+                placeholder="Endereço GC"
+                maxlength="20">
+        </div>
+        <div class="form-group col-auto">
+            <label for="leader" class="visually-hidden">leader</label>
+            <input type="text" formControlName="leader" 
+                id="leader" 
+                class="form-control" 
+                placeholder="Nome do líder">
+        </div>
+        <div class="form-group col-auto">
+            <label for="host" class="visually-hidden">host</label>
+            <input type="text" formControlName="host" 
+                id="host" 
+                class="form-control" 
+                placeholder="Nome do anfitrião">
+        </div>
+        <select class="col-auto select-gc" formControlName="disciplic">
+            <option selected>Discipulador</option>
+            <option value="Wendel">Wendel</option>
+            <option value="Marcio Ricardo">Marcio Ricardo</option>
+            <option value="Daniel">Daniel</option>
+        </select>
+        <div class="col-auto btn-submit">
+            <button type="submit" class="btn btn-primary mb-3" (click)="creatGc()">+ Conexão</button>
+        </div>
+    </form>
+</div>
+
+<br>Dirty: {{ gcForm.dirty }}
+<br>Touched: {{ gcForm.touched }}
+<br>Valid: {{ gcForm.valid }}
+<br>Value: {{ gcForm.value | json }}
+<br>&nbsp;

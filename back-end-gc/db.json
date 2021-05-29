@@ -1,0 +1,20 @@
+{
+  "gc": [
+    {
+      "nameGc": "Huios",
+      "address": "test address",
+      "leader": "test leader",
+      "host": "test host",
+      "disciplic": "test disciplic",
+      "id": 1
+    },
+    {
+      "nameGc": "test1",
+      "address": "test2",
+      "leader": "test3",
+      "host": "test4",
+      "disciplic": "Wendel",
+      "id": 2
+    }
+  ]
+}
