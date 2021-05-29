@@ -15,8 +15,17 @@ export class MemberReadComponent implements OnInit {
 
   ngOnInit(): void {
     this.memberService.read().subscribe(member => {
-      this.member = member
+      this.member = member;
     })
+  }
+
+  public edit() {
+    console.log("editar");
+  }
+
+  public delete() {
+    console.log("Excluído");
+    
   }
 
 }
