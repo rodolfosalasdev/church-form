@@ -27,6 +27,7 @@ export class MemberUpdateComponent implements OnInit {
     {name: 'Huios', value: 'Huios'},
     {name: '3:16', value: '3:16'},
   ]
+  selectedValue = '';
 
   constructor(private memberService: MemberService, 
     private fb: FormBuilder, 
@@ -50,6 +51,7 @@ export class MemberUpdateComponent implements OnInit {
   }
 
   public updateMember(): void {
+    this.memberModel.gc = this.selectedValue;
     this.memberService.update(this.memberModel).subscribe(() => {
       this.router.navigate(['/'])
     })

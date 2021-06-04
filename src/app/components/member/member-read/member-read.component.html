@@ -13,9 +13,9 @@
         <tbody *ngFor="let members of member; let i = index">
             <tr>
                 <th scope="row"> {{ i ++1 }} </th>
-                <td class="table-name"> {{ members.name }} </td>
+                <td class="table-name"> {{ members.name | titlecase}} </td>
                 <td class="table-whatsApp"> {{ members.whatsApp | mask: '(00)00000-0000'}} </td>
-                <td class="table-address"> {{ members.address }} </td>
+                <td class="table-address"> {{ members.address | titlecase}} </td>
                 <td class="table-gc"> {{ members.gc }} </td>
                 <td>
                     <a routerLink="members/update/{{ members.id }}" class="edit">

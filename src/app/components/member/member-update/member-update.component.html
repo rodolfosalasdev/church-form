@@ -41,7 +41,7 @@
                 [(ngModel)]="memberModel.bday">
         </div>
         
-        <select class="col-auto select-gc" formControlName="gc">
+        <select class="col-auto select-gc" formControlName="gc" [(ngModel)]="selectedValue">
             <option selected *ngFor="let gc of optionGc" 
                 [value]="gc.value">
                 {{ gc.name }}

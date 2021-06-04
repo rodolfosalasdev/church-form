@@ -22,6 +22,7 @@ export class MemberCreatComponent implements OnInit {
     {name: 'Huios', value: 'Huios'},
     {name: '3:16', value: '3:16'},
   ]
+  selectedValue = '';
 
   constructor(
     private fb: FormBuilder,
