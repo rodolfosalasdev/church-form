@@ -14,20 +14,28 @@ import { MemberService } from '../member.service';
 export class MemberCreatComponent implements OnInit {
 
   public gc: Array<gcModel> = [];
-
-  constructor(private fb: FormBuilder,
-    private router: Router,
-    private memberservice: MemberService,
-    private gcService: GcService) { }
-
   public memberForm: FormGroup = this.fb.group({});
+
+  public optionGc = [
+    {name: 'Selecione seu GC', value: '-'},
+    {name: 'Bethel', value: 'Bethel'},
+    {name: 'Huios', value: 'Huios'},
+    {name: '3:16', value: '3:16'},
+  ]
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private gcService: GcService,
+    private memberservice: MemberService) { }
+
 
   ngOnInit(): void {
     this.memberForm = this.fb.group({
       name: ['', Validators.required],
+      bday: ['', Validators.required],
       address: ['', Validators.required],
       whatsApp: ['', Validators.required],
-      bday: ['', Validators.required],
       gc: ['']
     })
     console.log(this.memberForm)
@@ -46,5 +54,4 @@ export class MemberCreatComponent implements OnInit {
       this.gc = gc;
     })
   }
-
 }

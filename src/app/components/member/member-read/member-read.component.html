@@ -10,15 +10,15 @@
                 <th scope="col">Ação</th>
             </tr>
         </thead>
-        <tbody *ngFor="let members of member">
+        <tbody *ngFor="let members of member; let i = index">
             <tr>
-                <th scope="row"> {{ members.id }} </th>
+                <th scope="row"> {{ i ++1 }} </th>
                 <td class="table-name"> {{ members.name }} </td>
-                <td class="table-whatsApp"> {{ members.whatsApp }} </td>
+                <td class="table-whatsApp"> {{ members.whatsApp | mask: '(00)00000-0000'}} </td>
                 <td class="table-address"> {{ members.address }} </td>
                 <td class="table-gc"> {{ members.gc }} </td>
                 <td>
-                    <a class="edit" (click)="edit()">
+                    <a routerLink="members/update/{{ members.id }}" class="edit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pencil-square" viewBox="0 0 16 16">
                             <path
@@ -28,7 +28,7 @@
                         </svg>
                     </a>
 
-                    <a (click)="delete()">
+                    <a routerLink="members/delete/{{ members.id }}" class="delete">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-x-lg" viewBox="0 0 16 16">
                             <path

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MemberModel } from '../member.model';
 import { MemberService } from '../member.service';
 
@@ -11,21 +12,15 @@ export class MemberReadComponent implements OnInit {
 
   public member: Array<MemberModel> = [];
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.memberService.read().subscribe(member => {
       this.member = member;
-    })
-  }
-
-  public edit() {
-    console.log("editar");
-  }
-
-  public delete() {
-    console.log("Excluído");
-    
+      console.log(this.member);
+      
+    });
   }
 
 }

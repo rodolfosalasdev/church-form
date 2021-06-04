@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { HttpClientModule } from  '@angular/common/http';
 import { MemberReadComponent } from './components/member/member-read/member-read.component';
+import { MemberDeleteComponent } from './components/member/member-delete/member-delete.component';
+import { MemberUpdateComponent } from './components/member/member-update/member-update.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { MemberReadComponent } from './components/member/member-read/member-read
     MemberCreatComponent,
     GcCreatComponent,
     MemberReadComponent,
+    MemberDeleteComponent,
+    MemberUpdateComponent,
 
   ],
   imports: [

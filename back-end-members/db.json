@@ -31,6 +31,22 @@
       "bday": "18062014",
       "gc": "Huíos",
       "id": 4
+    },
+    {
+      "name": "Vitor Falcão",
+      "address": "Rua Serrolandia, 17",
+      "whatsApp": "11987070489",
+      "bday": "18062014",
+      "gc": "Dínamus",
+      "id": 5
+    },
+    {
+      "name": "Bruno Salas Pereira",
+      "address": "Rua Serrolandia, 17",
+      "whatsApp": "11987070480",
+      "bday": "19111991",
+      "gc": "-",
+      "id": 7
     }
   ]
 }
